@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './Home.css'
 const Home = () => {
     return (
@@ -25,3 +26,14 @@ const Home = () => {
   }
   
   export default Home;
+=======
+const Home = () => {
+  return (
+    <div>
+      hello world 2
+    </div>
+  );
+}
+
+export default Home;
+>>>>>>> 487fd7e71f5e955f955f710a41891de15de24529
