@@ -1,10 +1,6 @@
-import './Button.css'
-function Button() {
-    return (
-      <button className="btn">
-       click me
-      </button>
-    );
-  }
+import "./Button.css";
+const Button=({label})=> {
+  return <button className="btn">{label}</button>;
+}
 
-  export default Button;
+export default Button;
