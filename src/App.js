@@ -1,6 +1,6 @@
 import './App.css';
-import Home from './pages/Home.js';
-import Button from './pages/Button.js'
+import Home from './pages/home';
+import Button from './components/button';
 
 function App() {
   return (
