@@ -4,26 +4,35 @@ import Home from './pages/home';
 import Button from './components/button';
 import List from './components/lists';
 
-
 function App() {
-  const [a, setA] = useState(true);
-  const [b,setB] = useState(false);
-  const [c,setC] = useState(true);
-  const [d,setD] = useState(false);
+  const [isActiveFirstItem , setIsActiveFirstItem] = useState(true);
+  const [isActiveSecondItem , setIsActiveSecondItem ] = useState(false);
+  const [isActiveThirdItem , setIsActiveThirdItem ] = useState(true);
+  const [isActiveFourthItem , setIsActiveFourthItem ] = useState(false);
 
-   const myitems = [
-    { title: 'item 1', ischecked: a },
-    { title: 'item 2', ischecked: b },
-    { title: 'item 3', ischecked: c },
-    { title: 'item 4', ischecked: d }
-  ]
+  const myitems = [
+    { title: 'item 1', ischecked: isActiveFirstItem},
+    { title: 'item 2', ischecked: isActiveSecondItem},
+    { title: 'item 3', ischecked: isActiveThirdItem},
+    { title: 'item 4', ischecked: isActiveFourthItem }
+  ];
+
+  
+  const reverse = () => {
+    setIsActiveFirstItem(prevA => !prevA); 
+    setIsActiveSecondItem(prevB => !prevB); 
+    setIsActiveThirdItem(prevC => !prevC); 
+    setIsActiveFourthItem(prevD => !prevD); 
+  }
+
   return (
     <div>
       <Home />
-      <Button label="Click Me" />
-      <List items={myitems}/>
+      <Button label="Click Me" onClick={reverse} /> 
+      <List items={myitems} />
     </div>
   );
 }
 
 export default App;
+
