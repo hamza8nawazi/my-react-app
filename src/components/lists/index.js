@@ -1,19 +1,24 @@
-import "./list.css"
+import "./list.css";
 
-const List=({item})=> {
-  
-    return (
-      <div className="list-container">
-        <ul>
-          {item.map((item) => (
-            <li>
-              <input type="checkbox" /> {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-  
-  export default List;
+const List = ({ items }) => {
+  return (
+    <div className="list-container">
+      <ul>
+        {items.map((item) => (  
+          <li> 
+            <input
+              disabled={true}
+              className="custom-checkbox"
+              type="checkbox"
+              checked={item.ischecked} 
+            /> {item.title}  
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default List;
+
   
